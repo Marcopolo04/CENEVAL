@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador EXANI II - Matemáticas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #F9FAFB;
+            margin: 20px;
+            padding: 20px;
+        }
+        h1 {
+            color: #1E3A8A;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options label {
+            display: block;
+            margin: 5px 0;
+        }
+        #submitBtn {
+            padding: 10px 20px;
+            background-color: #10B981;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #feedback {
+            margin-top: 30px;
+            background-color: #E5E7EB;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .error {
+            color: #DC2626;
+        }
+        .correct {
+            color: #059669;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador EXANI II - Matemáticas</h1>
+    <form id="quizForm">
+        <div class="question">
+            <p>1. ¿Cuál es el valor de x en la ecuación 2x + 5 = 13?</p>
+            <div class="options">
+                <label><input type="radio" name="q1" value="A"> A) x = 4</label>
+                <label><input type="radio" name="q1" value="B"> B) x = 5</label>
+                <label><input type="radio" name="q1" value="C"> C) x = 6</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>2. ¿Cuál es el área de un triángulo con base de 10 cm y altura de 6 cm?</p>
+            <div class="options">
+                <label><input type="radio" name="q2" value="A"> A) 30 cm²</label>
+                <label><input type="radio" name="q2" value="B"> B) 60 cm²</label>
+                <label><input type="radio" name="q2" value="C"> C) 16 cm²</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>3. Si f(x) = x² - 3x + 2, ¿cuál es el valor de f(2)?</p>
+            <div class="options">
+                <label><input type="radio" name="q3" value="A"> A) 0</label>
+                <label><input type="radio" name="q3" value="B"> B) 2</label>
+                <label><input type="radio" name="q3" value="C"> C) 4</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>4. ¿Cuál es la pendiente de la recta que pasa por los puntos (1,2) y (3,6)?</p>
+            <div class="options">
+                <label><input type="radio" name="q4" value="A"> A) 2</label>
+                <label><input type="radio" name="q4" value="B"> B) 3</label>
+                <label><input type="radio" name="q4" value="C"> C) 4</label>
+            </div>
+        </div>
+        <div class="question">
+            <p>5. ¿Cuál es el valor de la expresión: (3² + 4²)?</p>
+            <div class="options">
+                <label><input type="radio" name="q5" value="A"> A) 25</label>
+                <label><input type="radio" name="q5" value="B"> B) 49</label>
+                <label><input type="radio" name="q5" value="C"> C) 12</label>
+            </div>
+        </div>
+        <button type="button" id="submitBtn" onclick="evaluateQuiz()">Enviar respuestas</button>
+    </form>
+
+    <div id="feedback"></div>
+
+    <script>
+        function evaluateQuiz() {
+            const answers = {
+                q1: "A",
+                q2: "A",
+                q3: "A",
+                q4: "A",
+                q5: "A"
+            };
+
+            const feedbacks = {
+                q1: "Despejamos x: 2x = 13 - 5 → 2x = 8 → x = 4.",
+                q2: "Área = (base × altura) / 2 = (10 × 6) / 2 = 30 cm².",
+                q3: "f(2) = 2² - 3×2 + 2 = 4 - 6 + 2 = 0.",
+                q4: "Pendiente = (6 - 2) / (3 - 1) = 4 / 2 = 2.",
+                q5: "3² = 9, 4² = 16, entonces 9 + 16 = 25."
+            };
+
+            let feedbackHTML = "<h2>Retroalimentación</h2>";
+            let form = document.getElementById("quizForm");
+            let correctCount = 0;
+
+            for (let i = 1; i <= 5; i++) {
+                let qName = "q" + i;
+                let selected = form[qName].value;
+                if (selected === answers[qName]) {
+                    correctCount++;
+                    feedbackHTML += `<p class="correct">✅ Pregunta ${i}: Correcta</p>`;
+                } else {
+                    feedbackHTML += `<p class="error">❌ Pregunta ${i}: Incorrecta<br><strong>Retroalimentación:</strong> ${feedbacks[qName]}</p>`;
+                }
+            }
+
+            feedbackHTML += `<p><strong>Resultado final:</strong> ${correctCount} de 5 respuestas correctas.</p>`;
+            document.getElementById("feedback").innerHTML = feedbackHTML;
+        }
+    </script>
+</body>
+</html>
