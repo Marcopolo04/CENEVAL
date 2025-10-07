@@ -1,104 +1,73 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Simulador EXANI II - Matemáticas</title>
+    <title>CenevalMaster</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f9f9f9; }
-        h1 { color: #1E3A8A; }
-        .question { margin-bottom: 20px; }
-        .options input { margin-right: 10px; }
-        #results { margin-top: 30px; padding: 20px; background-color: #e5e7eb; border-radius: 8px; }
-        button { padding: 10px 20px; background-color: #10B981; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background-color: #0f9b6e; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: block;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .menu {
+            max-width: 800px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
-    <h1>Simulador EXANI II - Matemáticas</h1>
-    <form id="quizForm">
-        <div class="question">
-            <p>1. ¿Cuál es el valor de x en la ecuación 2x + 5 = 13?</p>
-            <div class="options">
-                <label><input type="radio" name="q1" value="A"> A) x = 4</label><br>
-                <label><input type="radio" name="q1" value="B"> B) x = 5</label><br>
-                <label><input type="radio" name="q1" value="C"> C) x = 6</label>
-            </div>
+    <header>
+        <h1>CenevalMaster</h1>
+        <p>Simuladores académicos tipo CENEVAL</p>
+    </header>
+    <nav>
+        <div class="menu">
+            premedicina/examen_premedicina_embebido.htmlSimulador Premedicina</a>
+            #Simulador EXANI II</a>
+            #Simulador Medicina</a>
+            <a hrefdor Psicología</a>
         </div>
-        <div class="question">
-            <p>2. ¿Cuál es el área de un triángulo con base de 10 cm y altura de 6 cm?</p>
-            <div class="options">
-                <label><input type="radio" name="q2" value="A"> A) 30 cm²</label><br>
-                <label><input type="radio" name="q2" value="B"> B) 60 cm²</label><br>
-                <label><input type="radio" name="q2" value="C"> C) 16 cm²</label>
-            </div>
-        </div>
-        <div class="question">
-            <p>3. Si f(x) = x² - 3x + 2, ¿cuál es el valor de f(2)?</p>
-            <div class="options">
-                <label><input type="radio" name="q3" value="A"> A) 0</label><br>
-                <label><input type="radio" name="q3" value="B"> B) 2</label><br>
-                <label><input type="radio" name="q3" value="C"> C) 4</label>
-            </div>
-        </div>
-        <div class="question">
-            <p>4. ¿Cuál es la pendiente de la recta que pasa por los puntos (1,2) y (3,6)?</p>
-            <div class="options">
-                <label><input type="radio" name="q4" value="A"> A) 2</label><br>
-                <label><input type="radio" name="q4" value="B"> B) 3</label><br>
-                <label><input type="radio" name="q4" value="C"> C) 4</label>
-            </div>
-        </div>
-        <div class="question">
-            <p>5. ¿Cuál es el valor de la expresión: (3² + 4²)?</p>
-            <div class="options">
-                <label><input type="radio" name="q5" value="A"> A) 25</label><br>
-                <label><input type="radio" name="q5" value="B"> B) 49</label><br>
-                <label><input type="radio" name="q5" value="C"> C) 12</label>
-            </div>
-        </div>
-        <button type="button" onclick="evaluateQuiz()">Enviar respuestas</button>
-    </form>
-    <div id="results"></div>
-
-    <script>
-        function evaluateQuiz() {
-            const answers = {
-                q1: "A",
-                q2: "A",
-                q3: "A",
-                q4: "A",
-                q5: "A"
-            };
-
-            const feedback = {
-                q1: "Despejamos x: 2x = 13 - 5 → 2x = 8 → x = 4.",
-                q2: "Área = (base × altura) / 2 = (10 × 6) / 2 = 30 cm².",
-                q3: "f(2) = 2² - 3×2 + 2 = 4 - 6 + 2 = 0.",
-                q4: "Pendiente = (6 - 2) / (3 - 1) = 4 / 2 = 2.",
-                q5: "3² = 9, 4² = 16, entonces 9 + 16 = 25."
-            };
-
-            let resultHTML = "<h2>Retroalimentación</h2>";
-            for (let i = 1; i <= 5; i++) {
-                const userAnswer = document.querySelector(`input[name="q${i}"]:checked`);
-                if (!userAnswer) {
-                    resultHTML += `<p><strong>Pregunta ${i}:</strong> No respondida.</p>`;
-                    continue;
-                }
-                const correct = answers[`q${i}`];
-                const selected = userAnswer.value;
-                if (selected === correct) {
-                    resultHTML += `<p><strong>Pregunta ${i}:</strong> ✅ Correcta.</p>`;
-                } else {
-                    resultHTML += `<p><strong>Pregunta ${i}:</strong> ❌ Incorrecta.<br>`;
-                    resultHTML += `Tu respuesta: ${selected}<br>`;
-                    resultHTML += `Respuesta correcta: ${correct}<br>`;
-                    resultHTML += `Retroalimentación: ${feedback[`q${i}`]}</p>`;
-                }
-            }
-            document.getElementById("results").innerHTML = resultHTML;
-        }
-    </script>
+    </nav>
+    <main>
+        <h2>Bienvenido a CenevalMaster</h2>
+        <p>Selecciona un simulador del menú para comenzar tu preparación.</p>
+    </main>
+    <footer>
+        <p>© 2024 Marco Polo - CenevalMaster</p>
+    </footer>
 </body>
 </html>
