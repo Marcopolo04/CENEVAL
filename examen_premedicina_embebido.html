@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulador CENEVAL Premedicina</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .pregunta { margin-bottom: 20px; }
+    .retro { margin-top: 30px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Simulador CENEVAL Premedicina</h1>
+  <form id="formulario">
+    <label>Nombre: <input type="text" id="nombre" required></label><br><br>
+    <label>Correo: <input type="email" id="correo" required></label><br><br>
+<div class="pregunta"><p><strong>1. ¿Cuál es la función principal de los glóbulos rojos?</strong></p><label><input type="radio" name="p0" value="0" required> Transportar oxígeno</label><br><label><input type="radio" name="p0" value="1" required> Combatir infecciones</label><br><label><input type="radio" name="p0" value="2" required> Coagular la sangre</label><br></div><div class="pregunta"><p><strong>2. ¿Qué órgano produce la insulina?</strong></p><label><input type="radio" name="p1" value="0" required> Hígado</label><br><label><input type="radio" name="p1" value="1" required> Páncreas</label><br><label><input type="radio" name="p1" value="2" required> Riñón</label><br></div><div class="pregunta"><p><strong>3. ¿Cuál es el hueso más largo del cuerpo humano?</strong></p><label><input type="radio" name="p2" value="0" required> Fémur</label><br><label><input type="radio" name="p2" value="1" required> Húmero</label><br><label><input type="radio" name="p2" value="2" required> Tibia</label><br></div><div class="pregunta"><p><strong>4. ¿Qué tipo de tejido conecta músculos con huesos?</strong></p><label><input type="radio" name="p3" value="0" required> Ligamento</label><br><label><input type="radio" name="p3" value="1" required> Tendón</label><br><label><input type="radio" name="p3" value="2" required> Cartílago</label><br></div><div class="pregunta"><p><strong>5. ¿Cuál es la unidad funcional del riñón?</strong></p><label><input type="radio" name="p4" value="0" required> Nefrona</label><br><label><input type="radio" name="p4" value="1" required> Glomérulo</label><br><label><input type="radio" name="p4" value="2" required> Uréter</label><br></div><div class="pregunta"><p><strong>6. ¿Qué vitamina es esencial para la coagulación sanguínea?</strong></p><label><input type="radio" name="p5" value="0" required> Vitamina C</label><br><label><input type="radio" name="p5" value="1" required> Vitamina K</label><br><label><input type="radio" name="p5" value="2" required> Vitamina D</label><br></div><div class="pregunta"><p><strong>7. ¿Cuál es el principal componente del sistema nervioso central?</strong></p><label><input type="radio" name="p6" value="0" required> Cerebro y médula espinal</label><br><label><input type="radio" name="p6" value="1" required> Nervios periféricos</label><br><label><input type="radio" name="p6" value="2" required> Ganglios linfáticos</label><br></div><div class="pregunta"><p><strong>8. ¿Qué tipo de célula es responsable de la respuesta inmunitaria?</strong></p><label><input type="radio" name="p7" value="0" required> Eritrocitos</label><br><label><input type="radio" name="p7" value="1" required> Leucocitos</label><br><label><input type="radio" name="p7" value="2" required> Plaquetas</label><br></div><div class="pregunta"><p><strong>9. ¿Cuál es la función del sistema linfático?</strong></p><label><input type="radio" name="p8" value="0" required> Transportar oxígeno</label><br><label><input type="radio" name="p8" value="1" required> Eliminar desechos</label><br><label><input type="radio" name="p8" value="2" required> Defensa inmunológica</label><br></div><div class="pregunta"><p><strong>10. ¿Qué estructura conecta la faringe con el estómago?</strong></p><label><input type="radio" name="p9" value="0" required> Tráquea</label><br><label><input type="radio" name="p9" value="1" required> Esófago</label><br><label><input type="radio" name="p9" value="2" required> Intestino delgado</label><br></div><div class="pregunta"><p><strong>11. ¿Qué hormona regula el metabolismo?</strong></p><label><input type="radio" name="p10" value="0" required> Insulina</label><br><label><input type="radio" name="p10" value="1" required> Adrenalina</label><br><label><input type="radio" name="p10" value="2" required> Tiroxina</label><br></div><div class="pregunta"><p><strong>12. ¿Cuál es la función del hígado?</strong></p><label><input type="radio" name="p11" value="0" required> Filtrar toxinas</label><br><label><input type="radio" name="p11" value="1" required> Bombear sangre</label><br><label><input type="radio" name="p11" value="2" required> Producción de hormonas</label><br></div><div class="pregunta"><p><strong>13. ¿Qué parte del ojo controla la cantidad de luz que entra?</strong></p><label><input type="radio" name="p12" value="0" required> Retina</label><br><label><input type="radio" name="p12" value="1" required> Pupila</label><br><label><input type="radio" name="p12" value="2" required> Córnea</label><br></div><div class="pregunta"><p><strong>14. ¿Qué tipo de articulación permite el movimiento del hombro?</strong></p><label><input type="radio" name="p13" value="0" required> Bisagra</label><br><label><input type="radio" name="p13" value="1" required> Deslizante</label><br><label><input type="radio" name="p13" value="2" required> Esferoidal</label><br></div><div class="pregunta"><p><strong>15. ¿Qué estructura del oído permite el equilibrio?</strong></p><label><input type="radio" name="p14" value="0" required> Cóclea</label><br><label><input type="radio" name="p14" value="1" required> Tímpano</label><br><label><input type="radio" name="p14" value="2" required> Canales semicirculares</label><br></div><div class="pregunta"><p><strong>16. ¿Cuál es el principal gas que exhalamos?</strong></p><label><input type="radio" name="p15" value="0" required> Oxígeno</label><br><label><input type="radio" name="p15" value="1" required> Dióxido de carbono</label><br><label><input type="radio" name="p15" value="2" required> Nitrógeno</label><br></div><div class="pregunta"><p><strong>17. ¿Qué célula transporta oxígeno en la sangre?</strong></p><label><input type="radio" name="p16" value="0" required> Plaquetas</label><br><label><input type="radio" name="p16" value="1" required> Glóbulos blancos</label><br><label><input type="radio" name="p16" value="2" required> Glóbulos rojos</label><br></div><div class="pregunta"><p><strong>18. ¿Qué parte del sistema digestivo absorbe nutrientes?</strong></p><label><input type="radio" name="p17" value="0" required> Estómago</label><br><label><input type="radio" name="p17" value="1" required> Intestino delgado</label><br><label><input type="radio" name="p17" value="2" required> Colon</label><br></div><div class="pregunta"><p><strong>19. ¿Qué glándula regula el crecimiento?</strong></p><label><input type="radio" name="p18" value="0" required> Tiroides</label><br><label><input type="radio" name="p18" value="1" required> Pineal</label><br><label><input type="radio" name="p18" value="2" required> Hipófisis</label><br></div><div class="pregunta"><p><strong>20. ¿Qué tipo de músculo forma el corazón?</strong></p><label><input type="radio" name="p19" value="0" required> Liso</label><br><label><input type="radio" name="p19" value="1" required> Cardíaco</label><br><label><input type="radio" name="p19" value="2" required> Esquelético</label><br></div><div class="pregunta"><p><strong>21. ¿Qué parte del cerebro controla el equilibrio?</strong></p><label><input type="radio" name="p20" value="0" required> Cerebelo</label><br><label><input type="radio" name="p20" value="1" required> Corteza cerebral</label><br><label><input type="radio" name="p20" value="2" required> Hipotálamo</label><br></div><div class="pregunta"><p><strong>22. ¿Qué estructura protege al cerebro?</strong></p><label><input type="radio" name="p21" value="0" required> Cráneo</label><br><label><input type="radio" name="p21" value="1" required> Columna vertebral</label><br><label><input type="radio" name="p21" value="2" required> Costillas</label><br></div><div class="pregunta"><p><strong>23. ¿Qué órgano produce bilis?</strong></p><label><input type="radio" name="p22" value="0" required> Páncreas</label><br><label><input type="radio" name="p22" value="1" required> Hígado</label><br><label><input type="radio" name="p22" value="2" required> Estómago</label><br></div><div class="pregunta"><p><strong>24. ¿Qué tipo de sangre es el donador universal?</strong></p><label><input type="radio" name="p23" value="0" required> AB+</label><br><label><input type="radio" name="p23" value="1" required> O-</label><br><label><input type="radio" name="p23" value="2" required> A+</label><br></div><div class="pregunta"><p><strong>25. ¿Qué estructura conecta los pulmones con la tráquea?</strong></p><label><input type="radio" name="p24" value="0" required> Bronquios</label><br><label><input type="radio" name="p24" value="1" required> Alvéolos</label><br><label><input type="radio" name="p24" value="2" required> Diafragma</label><br></div><div class="pregunta"><p><strong>26. ¿Qué parte del sistema nervioso controla funciones involuntarias?</strong></p><label><input type="radio" name="p25" value="0" required> Somático</label><br><label><input type="radio" name="p25" value="1" required> Autónomo</label><br><label><input type="radio" name="p25" value="2" required> Sensorial</label><br></div><div class="pregunta"><p><strong>27. ¿Qué célula inicia la coagulación sanguínea?</strong></p><label><input type="radio" name="p26" value="0" required> Plaquetas</label><br><label><input type="radio" name="p26" value="1" required> Glóbulos rojos</label><br><label><input type="radio" name="p26" value="2" required> Leucocitos</label><br></div><div class="pregunta"><p><strong>28. ¿Qué órgano filtra la sangre para formar orina?</strong></p><label><input type="radio" name="p27" value="0" required> Hígado</label><br><label><input type="radio" name="p27" value="1" required> Riñón</label><br><label><input type="radio" name="p27" value="2" required> Vejiga</label><br></div><div class="pregunta"><p><strong>29. ¿Qué parte del sistema respiratorio realiza el intercambio gaseoso?</strong></p><label><input type="radio" name="p28" value="0" required> Bronquios</label><br><label><input type="radio" name="p28" value="1" required> Alvéolos</label><br><label><input type="radio" name="p28" value="2" required> Tráquea</label><br></div><div class="pregunta"><p><strong>30. ¿Qué hormona se libera en respuesta al estrés?</strong></p><label><input type="radio" name="p29" value="0" required> Cortisol</label><br><label><input type="radio" name="p29" value="1" required> Insulina</label><br><label><input type="radio" name="p29" value="2" required> Melatonina</label><br></div>
+    <button type="submit">Enviar respuestas</button>
+  </form>
+
+  <div id="resultado" class="retro"></div>
+
+  <script>
+    const respuestasCorrectas = [0,1,0,1,0,1,0,1,2,1,2,0,1,2,2,1,2,1,2,1,0,0,1,1,0,1,0,1,1,0];
+    document.getElementById("formulario").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const correo = document.getElementById("correo").value;
+      let correctas = 0;
+      let respuestas = [];
+      for (let i = 0; i < respuestasCorrectas.length; i++) {
+        const seleccionada = document.querySelector('input[name="p'+i+'"]:checked');
+        const valor = seleccionada ? parseInt(seleccionada.value) : null;
+        respuestas.push(valor);
+        if (valor === respuestasCorrectas[i]) correctas++;
+      }
+      const incorrectas = respuestasCorrectas.length - correctas;
+      const porcentaje = Math.round((correctas / respuestasCorrectas.length) * 100);
+      document.getElementById("resultado").innerHTML = `
+        ✅ Aciertos: ${correctas}<br>
+        ❌ Errores: ${incorrectas}<br>
+        📊 Porcentaje: ${porcentaje}%
+      `;
+      const datos = {{
+        nombre: nombre,
+        correo: correo,
+        correctas: correctas,
+        incorrectas: incorrectas,
+        porcentaje: porcentaje,
+        respuestas: respuestas
+      }};
+      fetch("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec", {{
+        method: "POST",
+        body: JSON.stringify(datos),
+        headers: {{
+          "Content-Type": "application/json"
+        }}
+      }})
+      .then(res => res.text())
+      .then(res => console.log("Enviado a Google Sheets:", res));
+    });
+  </script>
+</body>
+</html>
